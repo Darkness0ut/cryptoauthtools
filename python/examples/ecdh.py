@@ -44,7 +44,7 @@ def ECDH(slot, iface='hid', **kwargs):
     if kwargs is not None:
         for k, v in kwargs.items():
             icfg = getattr(cfg.cfg, 'atca{}'.format(iface))
-            setattr(icfg, k, int(v, 16))
+            setattr(icfg, k, int(v, 0))
 
 
     # Basic Raspberry Pi I2C check
